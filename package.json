@@ -1,0 +1,50 @@
+﻿{
+  "name": "@auto-no-mous/copilot-react",
+  "version": "0.1.0",
+  "description": "React wrapper for the AI Copilot web SDK",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "src/index.d.ts",
+  "files": [
+    "dist",
+    "src/index.d.ts",
+    "README.md",
+    "docs"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "node ./node_modules/tsup/dist/cli-default.js src/index.tsx --format esm,cjs --clean",
+    "lint": "tsc --noEmit",
+    "test": "npm run build"
+  },
+  "keywords": [
+    "copilot",
+    "react",
+    "widget",
+    "sdk"
+  ],
+  "author": "Auto-no-mous AI",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "dependencies": {
+    "@auto-no-mous/copilot-web": "file:../ai-copilot-sdk"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "react": "^18.3.1",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

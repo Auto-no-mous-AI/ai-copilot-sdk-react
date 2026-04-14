@@ -1,23 +1,49 @@
-# AI Copilot React SDK
+﻿# AI Copilot React SDK
 
-React bindings for the core AI Copilot SDK.
+Standalone React hook wrapper for the core AI Copilot web SDK.
 
-## Repository scaffold
-- src
-- src/components
-- example
-- docs
+## Package
 
-## Status
-Scaffolded with baseline files:
-- .editorconfig
-- .gitignore
-- CONTRIBUTING.md
-- .github/CODEOWNERS
-- .github/pull_request_template.md
-- .github/workflows/ci.yml
+This repository publishes:
 
-## Next steps
-1. Initialize project tooling (Angular/NestJS/package setup).
-2. Add lint, test, and build scripts in package.json.
-3. Expand CI with repository-specific jobs.
+- `@auto-no-mous/copilot-react`
+
+## What it includes
+
+- `useCopilot(...)` React hook
+- dependency on the core widget runtime from `@auto-no-mous/copilot-web`
+- example React component source
+
+## Install
+
+```bash
+npm install @auto-no-mous/copilot-react @auto-no-mous/copilot-web react
+```
+
+## Usage
+
+```tsx
+import { useCopilot } from '@auto-no-mous/copilot-react';
+
+export function CopilotBootstrap() {
+  useCopilot({
+    appId: 'app_123',
+    environment: 'prod',
+    installToken: 'itkn_xxx',
+    apiBaseUrl: 'https://api.example.com/api',
+  });
+
+  return null;
+}
+```
+
+## Build
+
+```bash
+npm install
+npm run build
+```
+
+## Example
+
+See [example/App.tsx](example/App.tsx).
