@@ -1,4 +1,7 @@
-﻿# AI Copilot React SDK
+# AI Copilot React SDK
+[![CI](https://github.com/Auto-no-mous-AI/ai-copilot-sdk-react/actions/workflows/ci.yml/badge.svg)](https://github.com/Auto-no-mous-AI/ai-copilot-sdk-react/actions/workflows/ci.yml) [![Release](https://github.com/Auto-no-mous-AI/ai-copilot-sdk-react/actions/workflows/release.yml/badge.svg)](https://github.com/Auto-no-mous-AI/ai-copilot-sdk-react/actions/workflows/release.yml)
+
+
 
 Standalone React hook wrapper for the core AI Copilot web SDK.
 
@@ -47,3 +50,9 @@ npm run build
 ## Example
 
 See [example/App.tsx](example/App.tsx).
+
+## CI And Release
+
+- Manual CI trigger is available through the CI workflow in GitHub Actions.
+- Release instructions live in [docs/releasing.md](./docs/releasing.md).
+
